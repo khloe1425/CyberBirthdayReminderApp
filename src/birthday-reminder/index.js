@@ -32,7 +32,7 @@ export default class Reminder extends Component {
         <h3>{data.length} birthdays today</h3>
         <ListReminder listReminder={data} />
         <button onClick={this.handleClearData}>Clear All</button>
-        <p className='mt-4 text-center'>It is {this.state.date.toUTCString()}</p>
+        <p className='mt-4 text-center'>It is {this.state.date.toDateString()}</p>
       </section>
     )
   }
