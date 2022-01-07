@@ -29,10 +29,10 @@ export default class Reminder extends Component {
     const { data } = this.state;
     return (
       <section className='container'>
-        <h3>{data.length} birthdays today</h3>
+        <h3 className='text-center'>{data.length} birthdays today</h3>
+        <p className='text-center mb-4'>It is {this.state.date.toDateString()}</p>
         <ListReminder listReminder={data} />
         <button onClick={this.handleClearData}>Clear All</button>
-        <p className='mt-4 text-center'>It is {this.state.date.toDateString()}</p>
       </section>
     )
   }
