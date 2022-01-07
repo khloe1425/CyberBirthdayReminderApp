@@ -71,6 +71,9 @@ main {
   font-weight: normal;
   text-transform: none;
 }
+.container p{
+  font-size: 0.9rem;
+}
 .person {
   display: grid;
   grid-template-columns: auto 1fr;

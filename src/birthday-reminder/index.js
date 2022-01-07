@@ -30,7 +30,7 @@ export default class Reminder extends Component {
     return (
       <section className='container'>
         <h3 className='text-center'>{data.length} birthdays today</h3>
-        <p className='text-center mb-4'>It is {this.state.date.toDateString()}</p>
+        <p className='text-center mb-4'>It is {this.state.date.toString()}</p>
         <ListReminder listReminder={data} />
         <button onClick={this.handleClearData}>Clear All</button>
       </section>
