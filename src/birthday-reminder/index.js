@@ -24,6 +24,7 @@ export default class Reminder extends Component {
       });
     }, 1000);
   }
+  
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
