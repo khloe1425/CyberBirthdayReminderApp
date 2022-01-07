@@ -6,7 +6,8 @@ export default class Reminder extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data
+      data,
+      date: new Date()
     }
   }
 
@@ -16,6 +17,14 @@ export default class Reminder extends Component {
     })
   }
 
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        date: new Date()
+      });
+    }, 1000);
+  }
+
   render() {
     const { data } = this.state;
     return (
@@ -23,6 +32,7 @@ export default class Reminder extends Component {
         <h3>{data.length} birthdays today</h3>
         <ListReminder listReminder={data} />
         <button onClick={this.handleClearData}>Clear All</button>
+        <p className='mt-4 text-center'>It is {this.state.date.toUTCString()}</p>
       </section>
     )
   }
